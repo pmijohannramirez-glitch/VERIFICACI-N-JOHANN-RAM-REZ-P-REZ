@@ -3,94 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validación de Documentos Oficiales</title>
+    <title>Sistema de Verificación DAE - IPN</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #121b22;
-            color: #ffffff;
+            background-color: #555c64;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
             display: flex;
             justify-content: center;
         }
         .container {
             width: 100%;
-            max-width: 500px;
-            background-color: #1e2a34;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            max-width: 480px;
+            background: radial-gradient(circle, #bcd7e9 0%, #7fa8c9 100%);
+            border: 2px solid #335577;
+            padding: 15px;
+            box-sizing: border-box;
+            position: relative;
         }
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #2a3c4d;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-        .status-badge {
-            background-color: #2e7d32;
-            color: #ffffff;
-            font-weight: bold;
-            text-align: center;
-            padding: 8px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-        .info-row {
+        .top-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 15px;
+        }
+        .ipn-text {
+            font-size: 9px;
+            color: #6a1c3d;
+            font-weight: bold;
+            line-height: 1.1;
+            max-width: 180px;
+        }
+        .dae-logo {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #7fa8c9;
         }
-        .label {
-            color: #849eaf;
-            font-size: 14px;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-        .value {
-            font-size: 16px;
+        .dae-logo .dae-title {
+            font-size: 22px;
             font-weight: bold;
+            color: #467297;
+            line-height: 1;
+        }
+        .dae-logo .dae-sub {
+            font-size: 6px;
+            color: #666;
+            text-align: center;
+        }
+        .top-meta {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .meta-row {
+            display: flex;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        .meta-label {
+            color: #2b5c8f;
+            font-weight: bold;
+            width: 100px;
+            text-align: right;
+            margin-right: 12px;
+        }
+        .meta-value {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+        }
+        .status-badge {
+            background-color: #2b592b;
+            color: #a3cfa3;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            border: 1px solid #1e3f1e;
+            margin-bottom: 12px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+        }
+        .main-info {
+            border-top: 1px solid rgba(255,255,255,0.4);
+            padding-top: 12px;
+        }
+        .info-group {
+            display: flex;
+            margin-bottom: 14px;
+            font-size: 13px;
+            align-items: flex-start;
+        }
+        .info-label {
+            color: #2b5c8f;
+            width: 110px;
+            text-align: right;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .info-value {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
-        <h2>SISTEMA DE VERIFICACIÓN</h2>
+    <div class="top-logos">
+        <div class="ipn-text">
+            Instituto Politécnico Nacional<br>
+            Secretaría de Servicios Educativos<br>
+            Dirección de Administración Escolar
+        </div>
+        <div class="dae-logo">
+            <div class="dae-title">DAE</div>
+            <div class="dae-sub">Dirección de<br>Administración Escolar</div>
+        </div>
     </div>
-    
+
+    <div class="top-meta">
+        <div class="meta-row">
+            <div class="meta-label">C. Pasante Digital:</div>
+            <div class="meta-value">2026/563506</div>
+        </div>
+        <div class="meta-row">
+            <div class="meta-label">Boleta:</div>
+            <div class="meta-value">2023604298</div>
+        </div>
+        <div class="meta-row">
+            <div class="meta-label">CURP:</div>
+            <div class="meta-value">RAPJ050420HDFRRN01</div>
+        </div>
+    </div>
+
     <div class="status-badge">
         DOCUMENTO VIGENTE
     </div>
 
-    <div class="info-row">
-        <div class="label">Alumno(a):</div>
-        <div class="value">JOHANN RAMÍREZ PÉREZ</div>
-    </div>
+    <div class="main-info">
+        <div class="info-group">
+            <div class="info-label">Alumno(a):</div>
+            <div class="info-value">JOHANN RAMÍREZ PÉREZ</div>
+        </div>
 
-    <div class="info-row">
-        <div class="label">Unidad académica:</div>
-        <div class="value">ESCUELA SUPERIOR DE FÍSICA Y MATEMÁTICAS (ESFM)</div>
-    </div>
+        <div class="info-group">
+            <div class="info-label">Unidad académica:</div>
+            <div class="info-value">ESCUELA SUPERIOR DE FÍSICA Y MATEMÁTICAS (ESFM)</div>
+        </div>
 
-    <div class="info-row">
-        <div class="label">Programa académico:</div>
-        <div class="value">LICENCIATURA EN FÍSICA Y MATEMÁTICAS</div>
-    </div>
+        <div class="info-group">
+            <div class="info-label">Programa académico:</div>
+            <div class="info-value">LICENCIATURA EN FÍSICA Y MATEMÁTICAS</div>
+        </div>
 
-    <div class="info-row">
-        <div class="label">Documento:</div>
-        <div class="value">PASANTE NS. FÍSICO TEÓRICO Y MATEMÁTICO</div>
-    </div>
+        <div class="info-group">
+            <div class="info-label">Documento:</div>
+            <div class="info-value">PASANTE NS. FÍSICO TEÓRICO Y MATEMÁTICO</div>
+        </div>
 
-    <div class="info-row">
-        <div class="label">Código de verificación:</div>
-        <div class="value">RAPJ05042024330156</div>
+        <div class="info-group">
+            <div class="info-label">Codigo de verificación:</div>
+            <div class="info-value">RAPJ05042024330156</div>
+        </div>
+
+        <div class="info-group">
+            <div class="info-label">Número de hoja:</div>
+            <div class="info-value">1 / 1</div>
+        </div>
     </div>
 </div>
 
 </body>
 </html>
+
