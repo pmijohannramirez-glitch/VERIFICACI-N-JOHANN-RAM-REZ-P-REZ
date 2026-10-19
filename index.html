@@ -1,5 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Verificación DAE</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5d6874;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: radial-gradient(circle, #bcd7e9 0%, #7fa8c9 100%);
+            border: 2px solid #5a7f9e;
+            padding: 20px;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        .ipn-text {
+            font-size: 11px;
+            color: #6a1c3d;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+        .dae-logo {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            width: 85px;
+            height: 85px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #7fa8c9;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .dae-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3b5f7e;
+            line-height: 1;
+        }
+        .dae-sub {
+            font-size: 6px;
+            color: #444;
+            text-align: center;
+            font-weight: bold;
+        }
+        .meta-table {
+            margin-left: 30px;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        .meta-table td {
+            padding: 3px 5px;
+            font-size: 14px;
+            font-weight: bold;
+            vertical-align: top;
+        }
+        .label-blue {
+            color: #2b5c8f;
+            text-align: right;
+            width: 120px;
+        }
+        .value-white {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+        .status-badge {
+            background: linear-gradient(to bottom, #426e42, #1f3d1f);
+            color: #aae0aa;
+            font-weight: bold;
+            font-size: 13px;
+            padding: 5px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            border: 1px solid #142814;
+            margin-bottom: 15px;
+            box-shadow: inset 0 1px 3px rgba(255,255,255,0.2);
+        }
+        .main-info {
+            border-top: 1px solid rgba(255,255,255,0.5);
+            padding-top: 15px;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .info-label {
+            color: #2b5c8f;
+            width: 130px;
+            text-align: right;
+            margin-right: 15px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .info-value {
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+
 <div class="container">
-    <div class="top-logos">
+    <div class="top-section">
         <div class="ipn-text">
             Instituto Politécnico Nacional<br>
             Secretaría de Servicios Educativos<br>
@@ -11,52 +128,47 @@
         </div>
     </div>
 
-    <div class="top-meta">
-        <div class="meta-row">
-            <div class="meta-label">C. Pasante Digital:</div>
-            <div class="meta-value">2026/563506</div>
-        </div>
-        <div class="meta-row">
-            <div class="meta-label">Boleta:</div>
-            <div class="meta-value">2024330156</div>
-        </div>
-        <div class="meta-row">
-            <div class="meta-label">CURP:</div>
-            <div class="meta-value">RAPJ050427HMCMRHA8</div>
-        </div>
-    </div>
+    <table class="meta-table">
+        <tr>
+            <td class="label-blue">C. Pasante Digital:</td>
+            <td class="value-white">2026/563506</td>
+        </tr>
+        <tr>
+            <td class="label-blue">Boleta:</td>
+            <td class="value-white">2024330156</td>
+        </tr>
+        <tr>
+            <td class="label-blue">CURP:</td>
+            <td class="value-white">RAPJ050427HMCMRHA8</td>
+        </tr>
+    </table>
 
     <div class="status-badge">
         DOCUMENTO VIGENTE
     </div>
 
     <div class="main-info">
-        <div class="info-group">
+        <div class="info-row">
             <div class="info-label">Alumno(a):</div>
             <div class="info-value">JOHANN RAMÍREZ PÉREZ</div>
         </div>
-
-        <div class="info-group">
+        <div class="info-row">
             <div class="info-label">Unidad académica:</div>
             <div class="info-value">ESCUELA SUPERIOR DE FÍSICA Y MATEMÁTICAS (ESFM)</div>
         </div>
-
-        <div class="info-group">
+        <div class="info-row">
             <div class="info-label">Programa académico:</div>
             <div class="info-value">LICENCIATURA EN FÍSICA Y MATEMÁTICAS</div>
         </div>
-
-        <div class="info-group">
+        <div class="info-row">
             <div class="info-label">Documento:</div>
             <div class="info-value">PASANTE NS. FÍSICO TEÓRICO Y MATEMÁTICO</div>
         </div>
-
-        <div class="info-group">
-            <div class="info-label">Codigo de verificación:</div>
+        <div class="info-row">
+            <div class="info-label">Código de verificación:</div>
             <div class="info-value">RAPJ05042024330156</div>
         </div>
-
-        <div class="info-group">
+        <div class="info-row">
             <div class="info-label">Número de hoja:</div>
             <div class="info-value">1 / 1</div>
         </div>
@@ -65,4 +177,3 @@
 
 </body>
 </html>
-
